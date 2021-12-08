@@ -39,4 +39,3 @@ function (currentColor){
 * Contains a plausible collection of test cases
 * Outputs are accurately derived from inputs
 * Summary is plausible
-  * Official answer is that it represents the current state of a traffic light, and determines what the next state should be.
