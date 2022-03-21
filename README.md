@@ -1,3 +1,4 @@
+
 # Programming Exercise
 
 Your task is to figure out how this code works.
@@ -39,3 +40,88 @@ function (currentColor){
 * Contains a plausible collection of test cases
 * Outputs are accurately derived from inputs
 * Summary is plausible
+
+## Inputs and Outputs
+
+| Inputs | Outputs |
+| :---: | :---: |
+| yellow | red |
+| red | green |
+| green | yellow |
+
+
+
+## for input yellow
+
+for currentColor is yellow than it skips the first one and stops at the second and return red.
+
+```js
+
+const currentColor = yellow;
+
+function (currentColor){
+  if (currentColor === "green"){			// false
+    nextColor = "yellow"
+  } else if (currentColor === "yellow"){		// true
+    nextColor = 'red'
+  } else if (currentColor === "red"){			// does not run
+    nextColor = 'green'
+  }
+
+  return nextColor					// red
+}
+
+```
+
+
+## for input red
+
+for currentColor is red than it skips the first and second one and stops on the three one to return yellow.
+
+```js
+
+const currentColor = red;
+
+function (currentColor){
+  if (currentColor === "green"){			// false
+    nextColor = "yellow"
+  } else if (currentColor === "yellow"){		// false
+    nextColor = 'red'
+  } else if (currentColor === "red"){			// true
+    nextColor = 'green'
+  }
+
+  return nextColor					// green
+}
+
+```
+
+
+## for input green
+
+for currentColor is green than it  would stop with the first one and return nextColor is yellow.
+
+```js
+
+const currentColor = green;
+
+function (currentColor){
+  if (currentColor === "green"){			// true
+    nextColor = "yellow"
+  } else if (currentColor === "yellow"){		// does not run	
+    nextColor = 'red'
+  } else if (currentColor === "red"){			// does not run
+    nextColor = 'green'
+  }
+
+  return nextColor					// yellow
+}
+
+```
+
+## Summary
+
+As long as the currentColor equals the color listed then it would stop and display nextColor,
+as is the function of a stop light. If a different color not listed above should display as undefined.
+
+ 
